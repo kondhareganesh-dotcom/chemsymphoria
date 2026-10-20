@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ChemSymphoria 2026–27 — The Annual Chemistry Symposium of IISER Pune. A confluence of minds, molecules, and discovery.">
+  <meta property="og:title" content="ChemSymphoria 2026–27 | IISER Pune">
+  <meta property="og:description" content="Annual Chemistry Symposium — IISER Pune. Celebrating scientific discovery, molecular elegance, and the chemistry of ideas.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://chemsymphoria.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>ChemSymphoria 2026–27 | Annual Chemistry Symposium · IISER Pune</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/design-system.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+</head>
+<body>
+
+  <!-- Skip link -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Noise texture -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- ─── Navigation ────────────────────────────────────────── -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="ChemSymphoria home">
+        <svg class="nav__logo-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="32" cy="32" r="30" fill="#0A0E1A"/>
+          <g stroke="#0ABFBF" stroke-width="2" stroke-linecap="round">
+            <line x1="32" y1="12" x2="48" y2="21"/><line x1="48" y1="21" x2="48" y2="39"/>
+            <line x1="48" y1="39" x2="32" y2="48"/><line x1="32" y1="48" x2="16" y2="39"/>
+            <line x1="16" y1="39" x2="16" y2="21"/><line x1="16" y1="21" x2="32" y2="12"/>
+          </g>
+          <circle cx="32" cy="12" r="3" fill="#0ABFBF"/><circle cx="48" cy="21" r="3" fill="#0ABFBF"/>
+          <circle cx="48" cy="39" r="3" fill="#F5A623"/><circle cx="32" cy="48" r="3" fill="#0ABFBF"/>
+          <circle cx="16" cy="39" r="3" fill="#F5A623"/><circle cx="16" cy="21" r="3" fill="#0ABFBF"/>
+          <circle cx="32" cy="30" r="4" fill="#8B5CF6"/>
+        </svg>
+        <div class="nav__logo-text">
+          <span class="nav__logo-name">ChemSymphoria</span>
+          <span class="nav__logo-sub">IISER Pune · 2026–27</span>
+        </div>
+      </a>
+
+      <div class="nav__links" role="list">
+        <a href="about.html"          class="nav__link" role="listitem">About</a>
+        <a href="advisory-board.html" class="nav__link" role="listitem">Advisory Board</a>
+        <a href="speakers.html"       class="nav__link" role="listitem">Speakers</a>
+        <a href="schedule.html"       class="nav__link" role="listitem">Schedule</a>
+        <a href="activities.html"     class="nav__link" role="listitem">Activities</a>
+        <a href="team.html"           class="nav__link" role="listitem">Team</a>
+        <a href="sponsors.html"       class="nav__link" role="listitem">Sponsors</a>
+        <a href="contact.html"        class="nav__link" role="listitem">Contact</a>
+      </div>
+
+      <button class="nav__toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="nav__mobile" role="dialog" aria-label="Mobile navigation">
+    <a href="about.html"          class="nav__mobile-link">About</a>
+    <a href="advisory-board.html" class="nav__mobile-link">Advisory Board</a>
+    <a href="speakers.html"       class="nav__mobile-link">Speakers</a>
+    <a href="schedule.html"       class="nav__mobile-link">Schedule</a>
+    <a href="activities.html"     class="nav__mobile-link">Activities</a>
+    <a href="team.html"           class="nav__mobile-link">Team</a>
+    <a href="sponsors.html"       class="nav__mobile-link">Sponsors</a>
+    <a href="contact.html"        class="nav__mobile-link">Contact</a>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ─── Hero ──────────────────────────────────────────── -->
+    <section class="hero" aria-label="Hero section">
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
+      <div class="hero__atmosphere" aria-hidden="true"></div>
+      <div class="hero__grid"      aria-hidden="true"></div>
+
+      <div class="hero__content">
+        <div class="hero__eyebrow">
+          <span class="hero__eyebrow-line" aria-hidden="true"></span>
+          <span class="hero__eyebrow-text">Department of Chemistry · IISER Pune</span>
+          <span class="hero__eyebrow-line" aria-hidden="true"></span>
+        </div>
+
+        <h1 class="hero__title">
+          <span class="hero__title-main">ChemSymphoria</span>
+          <span class="hero__title-year">2026 – 27</span>
+        </h1>
+
+        <p class="hero__tagline">
+          Where Molecular Elegance Meets Scientific Discovery
+        </p>
+
+        <div class="hero__meta" role="list">
+          <div class="hero__meta-item" role="listitem">
+            <svg class="hero__meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+            <span>To Be Announced</span>
+          </div>
+          <div class="hero__meta-sep" aria-hidden="true"></div>
+          <div class="hero__meta-item" role="listitem">
+            <svg class="hero__meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+            <span>C.V. Raman Auditorium, IISER Pune</span>
+          </div>
+          <div class="hero__meta-sep" aria-hidden="true"></div>
+          <div class="hero__meta-item" role="listitem">
+            <svg class="hero__meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"/>
+            </svg>
+            <span>Annual Chemistry Symposium</span>
+          </div>
+        </div>
+
+        <div class="hero__actions">
+          <a href="schedule.html" class="btn btn--primary btn--lg">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+              <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="16" y1="2" x2="16" y2="6"/>
+            </svg>
+            View Program
+          </a>
+          <a href="speakers.html" class="btn btn--secondary btn--lg">Explore Speakers</a>
+          <a href="contact.html" class="btn btn--ghost btn--lg">Register Interest</a>
+        </div>
+      </div>
+
+      <div class="hero__scroll-cue" aria-hidden="true">
+        <div class="hero__scroll-cue-line"></div>
+        <span class="hero__scroll-cue-text">Scroll</span>
+      </div>
+    </section>
+
+    <!-- ─── Stats Bar ──────────────────────────────────────── -->
+    <section class="stats-bar" aria-label="Event statistics">
+      <div class="container">
+        <div class="stats-bar__grid">
+          <div class="stats-bar__item reveal">
+            <div class="stats-bar__value">20+</div>
+            <div class="stats-bar__label">Distinguished Speakers</div>
+          </div>
+          <div class="stats-bar__item reveal reveal--delay-1">
+            <div class="stats-bar__value">2</div>
+            <div class="stats-bar__label">Days of Science</div>
+          </div>
+          <div class="stats-bar__item reveal reveal--delay-2">
+            <div class="stats-bar__value">8+</div>
+            <div class="stats-bar__label">Competitions &amp; Activities</div>
+          </div>
+          <div class="stats-bar__item reveal reveal--delay-3">
+            <div class="stats-bar__value">2026</div>
+            <div class="stats-bar__label">Edition</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── About Section ─────────────────────────────────── -->
+    <section class="about-home section" id="about" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about-home__inner">
+          <!-- Visual panel -->
+          <div class="about-home__visual reveal">
+            <div class="about-home__visual-box about-home__visual-box--main">
+              <div class="about-home__molecule">
+                <svg viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" class="molecule-hero-svg" aria-hidden="true">
+                  <!-- Benzene-like ring with radiating bonds -->
+                  <g opacity="0.6">
+                    <circle cx="200" cy="200" r="60" stroke="#0ABFBF" stroke-width="1.5" stroke-dasharray="8 4"/>
+                    <!-- Hexagon vertices -->
+                    <line x1="200" y1="140" x2="200" y2="80" stroke="#0ABFBF" stroke-width="1.5"/>
+                    <line x1="252" y1="170" x2="296" y2="144" stroke="#F5A623" stroke-width="1.5"/>
+                    <line x1="252" y1="230" x2="296" y2="256" stroke="#0ABFBF" stroke-width="1.5"/>
+                    <line x1="200" y1="260" x2="200" y2="320" stroke="#8B5CF6" stroke-width="1.5"/>
+                    <line x1="148" y1="230" x2="104" y2="256" stroke="#F5A623" stroke-width="1.5"/>
+                    <line x1="148" y1="170" x2="104" y2="144" stroke="#0ABFBF" stroke-width="1.5"/>
+                    <!-- Hexagon sides -->
+                    <line x1="200" y1="140" x2="252" y2="170" stroke="#0ABFBF" stroke-width="1.5"/>
+                    <line x1="252" y1="170" x2="252" y2="230" stroke="#0ABFBF" stroke-width="1.5"/>
+                    <line x1="252" y1="230" x2="200" y2="260" stroke="#0ABFBF" stroke-width="1.5"/>
+                    <line x1="200" y1="260" x2="148" y2="230" stroke="#0ABFBF" stroke-width="1.5"/>
+                    <line x1="148" y1="230" x2="148" y2="170" stroke="#0ABFBF" stroke-width="1.5"/>
+                    <line x1="148" y1="170" x2="200" y2="140" stroke="#0ABFBF" stroke-width="1.5"/>
+                    <!-- Atoms -->
+                    <circle cx="200" cy="140" r="6" fill="#0ABFBF" opacity="0.9"/>
+                    <circle cx="252" cy="170" r="6" fill="#0ABFBF" opacity="0.9"/>
+                    <circle cx="252" cy="230" r="6" fill="#F5A623" opacity="0.9"/>
+                    <circle cx="200" cy="260" r="6" fill="#0ABFBF" opacity="0.9"/>
+                    <circle cx="148" cy="230" r="6" fill="#F5A623" opacity="0.9"/>
+                    <circle cx="148" cy="170" r="6" fill="#0ABFBF" opacity="0.9"/>
+                    <!-- Terminal atoms -->
+                    <circle cx="200" cy="80" r="4" fill="#0ABFBF" opacity="0.6"/>
+                    <circle cx="296" cy="144" r="4" fill="#F5A623" opacity="0.6"/>
+                    <circle cx="296" cy="256" r="4" fill="#0ABFBF" opacity="0.6"/>
+                    <circle cx="200" cy="320" r="4" fill="#8B5CF6" opacity="0.6"/>
+                    <circle cx="104" cy="256" r="4" fill="#F5A623" opacity="0.6"/>
+                    <circle cx="104" cy="144" r="4" fill="#0ABFBF" opacity="0.6"/>
+                    <!-- Center -->
+                    <circle cx="200" cy="200" r="10" fill="#8B5CF6" opacity="0.5"/>
+                    <circle cx="200" cy="200" r="4"  fill="#8B5CF6" opacity="1"/>
+                    <!-- Orbital rings -->
+                    <ellipse cx="200" cy="200" rx="100" ry="30" stroke="#8B5CF6" stroke-width="0.8" opacity="0.3" transform="rotate(-30 200 200)"/>
+                    <ellipse cx="200" cy="200" rx="100" ry="30" stroke="#0ABFBF" stroke-width="0.8" opacity="0.3" transform="rotate(30 200 200)"/>
+                    <ellipse cx="200" cy="200" rx="100" ry="30" stroke="#F5A623" stroke-width="0.8" opacity="0.3" transform="rotate(90 200 200)"/>
+                  </g>
+                </svg>
+              </div>
+            </div>
+            <div class="about-home__visual-box about-home__visual-box--accent">
+              <div class="about-home__visual-accent-value">IISER</div>
+              <div class="about-home__visual-accent-label">Pune, Maharashtra</div>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="about-home__content reveal reveal--delay-1">
+            <span class="label">About the Symposium</span>
+            <h2 class="section-title mb-6" id="about-heading" style="margin-top:1rem;">
+              Where Chemistry<br>Finds Its Symphony
+            </h2>
+            <p class="section-subtitle mb-6">
+              ChemSymphoria is the annual in-house chemistry symposium of IISER Pune — a celebration of scientific discovery orchestrated by the Department of Chemistry and the Chemphilic student club.
+            </p>
+            <p class="section-subtitle">
+              The event brings together distinguished researchers, faculty, and students for talks, poster sessions, competitions, and vibrant discourse at the frontier of chemical science.
+            </p>
+
+            <div class="about-home__features">
+              <div class="about-home__feature">
+                <div class="about-home__feature-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="about-home__feature-title">Distinguished Invited Talks</div>
+                  <div class="about-home__feature-desc">Lectures from leading chemists at the frontier of research across India and abroad.</div>
+                </div>
+              </div>
+              <div class="about-home__feature">
+                <div class="about-home__feature-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="about-home__feature-title">Research Poster Sessions</div>
+                  <div class="about-home__feature-desc">Students and scholars present cutting-edge research in an open, engaging format.</div>
+                </div>
+              </div>
+              <div class="about-home__feature">
+                <div class="about-home__feature-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="about-home__feature-title">Scientific Competitions</div>
+                  <div class="about-home__feature-desc">Chemistry quizzes, lab challenges, and science communication events for all participants.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex gap-4" style="margin-top: 2rem;">
+              <a href="about.html" class="btn btn--primary">Learn More</a>
+              <a href="schedule.html" class="btn btn--ghost">Full Program</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Speakers Preview ───────────────────────────────── -->
+    <section class="speakers-home section" id="speakers" aria-labelledby="speakers-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="label">Invited Speakers</span>
+          <h2 class="section-title" id="speakers-heading">Distinguished Scientists</h2>
+          <p class="section-subtitle" style="margin: 0 auto;">
+            ChemSymphoria brings together exceptional minds from across the spectrum of chemical science. Full speaker details will be announced soon.
+          </p>
+        </div>
+
+        <div class="grid grid--4 reveal reveal--delay-1">
+          <!-- Speaker placeholders — to be updated with real speaker data -->
+          <article class="speaker-card card--teal">
+            <div class="speaker-card__image-wrap">
+              <div class="speaker-card__placeholder" aria-label="Speaker photo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                </svg>
+              </div>
+            </div>
+            <div class="speaker-card__body">
+              <div class="speaker-card__name">To Be Announced</div>
+              <div class="speaker-card__role">Plenary Speaker</div>
+              <div class="speaker-card__affil">Details coming soon</div>
+            </div>
+          </article>
+
+          <article class="speaker-card card--teal">
+            <div class="speaker-card__image-wrap">
+              <div class="speaker-card__placeholder" aria-label="Speaker photo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                </svg>
+              </div>
+            </div>
+            <div class="speaker-card__body">
+              <div class="speaker-card__name">To Be Announced</div>
+              <div class="speaker-card__role">Plenary Speaker</div>
+              <div class="speaker-card__affil">Details coming soon</div>
+            </div>
+          </article>
+
+          <article class="speaker-card card--teal">
+            <div class="speaker-card__image-wrap">
+              <div class="speaker-card__placeholder" aria-label="Speaker photo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                </svg>
+              </div>
+            </div>
+            <div class="speaker-card__body">
+              <div class="speaker-card__name">To Be Announced</div>
+              <div class="speaker-card__role">Invited Speaker</div>
+              <div class="speaker-card__affil">Details coming soon</div>
+            </div>
+          </article>
+
+          <article class="speaker-card card--teal">
+            <div class="speaker-card__image-wrap">
+              <div class="speaker-card__placeholder" aria-label="Speaker photo">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                  <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/>
+                </svg>
+              </div>
+            </div>
+            <div class="speaker-card__body">
+              <div class="speaker-card__name">To Be Announced</div>
+              <div class="speaker-card__role">Invited Speaker</div>
+              <div class="speaker-card__affil">Details coming soon</div>
+            </div>
+          </article>
+        </div>
+
+        <div class="text-center" style="margin-top: 3rem;">
+          <a href="speakers.html" class="btn btn--secondary">View All Speakers →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Schedule Preview ───────────────────────────────── -->
+    <section class="schedule-home section" id="schedule" aria-labelledby="schedule-heading">
+      <div class="container container--narrow" style="max-width: 800px;">
+        <div class="section-header reveal">
+          <span class="label">Program at a Glance</span>
+          <h2 class="section-title" id="schedule-heading">Event Schedule</h2>
+        </div>
+
+        <div class="schedule-tabs" role="tablist">
+          <button class="schedule-tab active" data-day="1" role="tab" aria-selected="true" aria-controls="day-1">Day 1</button>
+          <button class="schedule-tab" data-day="2" role="tab" aria-selected="false" aria-controls="day-2">Day 2</button>
+        </div>
+
+        <div class="schedule-day active" id="day-1" role="tabpanel">
+          <div class="schedule-entry reveal">
+            <div class="schedule-entry__time">09:00</div>
+            <div class="schedule-entry__content">
+              <div class="flex-between">
+                <div class="schedule-entry__title">Inauguration &amp; Welcome Address</div>
+                <span class="badge badge--teal">Opening</span>
+              </div>
+              <div class="schedule-entry__speaker">Department of Chemistry, IISER Pune</div>
+            </div>
+          </div>
+          <div class="schedule-entry reveal reveal--delay-1">
+            <div class="schedule-entry__time">10:00</div>
+            <div class="schedule-entry__content">
+              <div class="flex-between">
+                <div class="schedule-entry__title">Plenary Lecture I</div>
+                <span class="badge badge--violet">Keynote</span>
+              </div>
+              <div class="schedule-entry__speaker">Invited Speaker — TBA</div>
+            </div>
+          </div>
+          <div class="schedule-entry reveal reveal--delay-2">
+            <div class="schedule-entry__time">11:30</div>
+            <div class="schedule-entry__content">
+              <div class="schedule-entry__title">Invited Talks Session I</div>
+              <div class="schedule-entry__speaker">Multiple Speakers</div>
+            </div>
+          </div>
+          <div class="schedule-entry reveal reveal--delay-3">
+            <div class="schedule-entry__time">13:00</div>
+            <div class="schedule-entry__content">
+              <div class="flex-between">
+                <div class="schedule-entry__title">Lunch &amp; Networking</div>
+                <span class="badge badge--amber">Break</span>
+              </div>
+            </div>
+          </div>
+          <div class="schedule-entry reveal reveal--delay-4">
+            <div class="schedule-entry__time">14:30</div>
+            <div class="schedule-entry__content">
+              <div class="schedule-entry__title">Poster Session I</div>
+              <div class="schedule-entry__speaker">Research Scholars &amp; Students</div>
+            </div>
+          </div>
+          <div class="schedule-entry reveal reveal--delay-5">
+            <div class="schedule-entry__time">16:30</div>
+            <div class="schedule-entry__content">
+              <div class="schedule-entry__title">Chemistry Quiz &amp; Cultural Events</div>
+              <div class="schedule-entry__speaker">Chemphilic Team</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="schedule-day" id="day-2" role="tabpanel">
+          <div class="schedule-entry reveal">
+            <div class="schedule-entry__time">09:30</div>
+            <div class="schedule-entry__content">
+              <div class="flex-between">
+                <div class="schedule-entry__title">Plenary Lecture II</div>
+                <span class="badge badge--violet">Keynote</span>
+              </div>
+              <div class="schedule-entry__speaker">Invited Speaker — TBA</div>
+            </div>
+          </div>
+          <div class="schedule-entry reveal reveal--delay-1">
+            <div class="schedule-entry__time">11:00</div>
+            <div class="schedule-entry__content">
+              <div class="schedule-entry__title">Invited Talks Session II</div>
+              <div class="schedule-entry__speaker">Multiple Speakers</div>
+            </div>
+          </div>
+          <div class="schedule-entry reveal reveal--delay-2">
+            <div class="schedule-entry__time">13:00</div>
+            <div class="schedule-entry__content">
+              <div class="flex-between">
+                <div class="schedule-entry__title">Lunch &amp; Networking</div>
+                <span class="badge badge--amber">Break</span>
+              </div>
+            </div>
+          </div>
+          <div class="schedule-entry reveal reveal--delay-3">
+            <div class="schedule-entry__time">14:30</div>
+            <div class="schedule-entry__content">
+              <div class="schedule-entry__title">Poster Session II &amp; Activities</div>
+              <div class="schedule-entry__speaker">All Participants</div>
+            </div>
+          </div>
+          <div class="schedule-entry reveal reveal--delay-4">
+            <div class="schedule-entry__time">17:00</div>
+            <div class="schedule-entry__content">
+              <div class="flex-between">
+                <div class="schedule-entry__title">Valedictory &amp; Awards Ceremony</div>
+                <span class="badge badge--teal">Closing</span>
+              </div>
+              <div class="schedule-entry__speaker">Department of Chemistry, IISER Pune</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center" style="margin-top: 3rem;">
+          <a href="schedule.html" class="btn btn--primary">Full Schedule →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Activities Preview ────────────────────────────── -->
+    <section class="activities-home section" id="activities" aria-labelledby="activities-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="label">Events &amp; Activities</span>
+          <h2 class="section-title" id="activities-heading">Beyond the Lecture Hall</h2>
+          <p class="section-subtitle" style="margin: 0 auto;">
+            Competitions, workshops, and cultural experiences designed to celebrate the many dimensions of chemistry.
+          </p>
+        </div>
+
+        <div class="grid grid--3 reveal reveal--delay-1">
+          <article class="activity-card">
+            <div class="activity-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/>
+              </svg>
+            </div>
+            <h3 class="activity-card__title">Chemistry Quiz</h3>
+            <p class="activity-card__desc">A rigorous and fun chemistry quiz testing knowledge across organic, inorganic, physical, and analytical domains.</p>
+            <a href="activities.html" class="activity-card__cta">
+              Learn more
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <path d="M5 12h14m-7-7l7 7-7 7"/>
+              </svg>
+            </a>
+          </article>
+
+          <article class="activity-card">
+            <div class="activity-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M8 3v3a2 2 0 01-2 2H3m18 0h-3a2 2 0 01-2-2V3m0 18v-3a2 2 0 012-2h3M3 16h3a2 2 0 012 2v3"/>
+              </svg>
+            </div>
+            <h3 class="activity-card__title">Poster Presentation</h3>
+            <p class="activity-card__desc">Research scholars and students present their work in an open scientific poster session with peer evaluation.</p>
+            <a href="activities.html" class="activity-card__cta">
+              Learn more
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <path d="M5 12h14m-7-7l7 7-7 7"/>
+              </svg>
+            </a>
+          </article>
+
+          <article class="activity-card">
+            <div class="activity-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>
+              </svg>
+            </div>
+            <h3 class="activity-card__title">Science Communication</h3>
+            <p class="activity-card__desc">Explain complex chemical concepts in creative, accessible ways — art, metaphor, and storytelling welcome.</p>
+            <a href="activities.html" class="activity-card__cta">
+              Learn more
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <path d="M5 12h14m-7-7l7 7-7 7"/>
+              </svg>
+            </a>
+          </article>
+        </div>
+
+        <div class="text-center" style="margin-top: 3rem;">
+          <a href="activities.html" class="btn btn--secondary">All Activities →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Sponsors Strip ─────────────────────────────────── -->
+    <section class="sponsors-strip" aria-labelledby="sponsors-home-heading">
+      <div class="container">
+        <p class="sponsors-strip__label" id="sponsors-home-heading">Institutional Support &amp; Partners</p>
+        <div class="sponsors-strip__logos">
+          <div class="sponsors-strip__logo-placeholder">IISER Pune</div>
+          <div class="sponsors-strip__logo-placeholder">Dept. of Chemistry</div>
+          <div class="sponsors-strip__logo-placeholder">Chemphilic Club</div>
+          <div class="sponsors-strip__logo-placeholder">DST · India</div>
+          <div class="sponsors-strip__logo-placeholder">CSIR</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── CTA Banner ─────────────────────────────────────── -->
+    <section class="section" aria-labelledby="cta-heading">
+      <div class="container">
+        <div class="cta-banner reveal">
+          <div class="cta-banner__glow" aria-hidden="true"></div>
+          <h2 class="cta-banner__title" id="cta-heading">
+            Be Part of the<br>
+            <span class="text-teal">Scientific Symphony</span>
+          </h2>
+          <p class="cta-banner__desc">
+            Join researchers, scholars, and students from across India for two days of lectures, posters, competitions, and the joy of chemistry.
+          </p>
+          <div class="cta-banner__actions">
+            <a href="contact.html" class="btn btn--primary btn--lg">Register Interest</a>
+            <a href="sponsors.html" class="btn btn--ghost btn--lg">Become a Sponsor</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ─── Footer ────────────────────────────────────────────── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__brand-name">ChemSymphoria</div>
+          <p class="footer__brand-desc">
+            Annual Chemistry Symposium · Department of Chemistry, IISER Pune. Celebrating the elegance of chemical science.
+          </p>
+        </div>
+        <div>
+          <p class="footer__col-title">Navigate</p>
+          <nav class="footer__links" aria-label="Footer navigation">
+            <a href="about.html"          class="footer__link">About</a>
+            <a href="advisory-board.html" class="footer__link">Advisory Board</a>
+            <a href="speakers.html"       class="footer__link">Speakers</a>
+            <a href="schedule.html"       class="footer__link">Schedule</a>
+          </nav>
+        </div>
+        <div>
+          <p class="footer__col-title">Explore</p>
+          <nav class="footer__links" aria-label="Footer navigation secondary">
+            <a href="activities.html" class="footer__link">Activities</a>
+            <a href="team.html"       class="footer__link">Team</a>
+            <a href="sponsors.html"   class="footer__link">Sponsors</a>
+            <a href="contact.html"    class="footer__link">Contact</a>
+          </nav>
+        </div>
+        <div>
+          <p class="footer__col-title">Contact</p>
+          <div class="footer__links">
+            <span class="footer__link">IISER Pune, Dr. Homi Bhabha Road</span>
+            <span class="footer__link">Pashan, Pune – 411008</span>
+            <span class="footer__link">Maharashtra, India</span>
+            <a href="mailto:chemsymphoria@iiserpune.ac.in" class="footer__link" style="color: var(--color-teal);">chemsymphoria@iiserpune.ac.in</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 ChemSymphoria. Organized by the Department of Chemistry, IISER Pune.</p>
+        <p class="footer__iiser">Hosted on <a href="https://pages.github.com" class="footer__link">GitHub Pages</a> · <a href="https://chemsymphoria.com" class="footer__link">chemsymphoria.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
